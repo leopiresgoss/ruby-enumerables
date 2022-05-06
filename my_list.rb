@@ -12,15 +12,32 @@ class MyList
   end
 end
 
-my_list = MyList.new(1, 2, 3)
-puts my_list
-# Test each method
-my_list.each { |e| puts "elem #{e}" }
-# => elem 1
-# => elem 2
-# => elem 3
+list = MyList.new(1, 2, 3, 4)
+# => #<MyList: @list=[1, 2, 3, 4]>
 
-puts my_list.each
-# => [1, 2, 3]
+# Test #all?
+list.all? { |e| e < 5 }
+# => true
 
-puts my_list.all? { |n| n > 0 }
+list.all? { |e| e > 5 }
+# => false
+
+list.all?
+# => true
+
+# Test #any?
+list.any? { |e| e == 2 }
+# => true
+
+list.any? { |e| e == 5 }
+# => false
+
+list.any?
+# => true
+
+# Test #filter
+list.filter(&:even?)
+# => [2, 4]
+
+list.filter
+# => [1, 2, 3, 4]
