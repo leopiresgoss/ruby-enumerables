@@ -43,7 +43,7 @@ To get a local copy follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/leopiresgoss/space-travelers/issues).
+Feel free to check the [issues page](https://github.com/leopiresgoss/ruby-enumerables/issues).
 
 ## Show your support
 
